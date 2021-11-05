@@ -13,15 +13,12 @@ a {
     text-decoration: none;
 }
 
-#header-hero {
-    background-color: #1f2937;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 60px 0 60px;
+    background-color: #1f2937;
 }
 
 .header.links {
@@ -39,6 +36,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 70px;
+    background-color: #1f2937;
 }
 
 .hero div {
@@ -59,20 +57,16 @@ a {
 
 .container {
     display: flex;
-}
-
-.container.card {
     gap: 60px;
 }
 
-.container .card {
+.container > .card {
+    display: flex;
     width: 150px;
-    text-align: center;
     margin-top: 30px;
-}
-
-.container .card > p {
-    margin: 4px 0;
+    flex-flow: column nowrap;
+    text-align: center;
+    gap: 6px;
 }
 
 .quote {
@@ -84,7 +78,7 @@ a {
     background-color: #e5e7eb;
 }
 
-.quote div {
+.quote > div {
     width: 400px;
 }
 
@@ -99,11 +93,13 @@ a {
     height: 280px;
 }
 
-.container.action {
-    flex-flow: column wrap;
+.action {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     height: 50px;
-    gap: 40px;
+    gap: 80px;
 }
 
 .footer {
@@ -111,4 +107,5 @@ a {
     justify-content: center;
     align-items: center;
     padding: 30px;
+    background-color: #1f2937;
 }
