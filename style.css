@@ -1,32 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --high-white: #f9faf8;
+    --low-white: #e5e7eb;
+    --red-bg: #f53737;
+    --black: #1c2229;
+    --green: #358035;
+    /**/
+    --low-font-size: 18px;
+}
 
 * {
     margin: 0;
-}
-
-body {
-    margin: 0;
-    font-family: "Roboto", Verdana, Arial, sans-serif;
+    font-family: "Rubik", Verdana, Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
+    color: var(--low-white);
+    background-color: var(--red-bg);
+    font-size: var(--low-font-size);
+    padding: 8px 16px;
+    border-radius: 12px;
+    text-shadow: 2px 1px black;
+}
+
+button {
+    background-color: var(--red-bg);
+    color: var(--high-white);
+    padding: 8px 30px;
+    border-style: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 2px 1px black;
+    border: 2px solid var(--high-white);
+    border-radius: 6px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 60px 0 60px;
-    background-color: #1f2937;
+    padding: 16px 100px;
+    background-color: var(--green);
 }
 
-.header.links {
+.header.links,
+.header div {
     display: flex;
+    align-items: center;
     list-style-type: none;
     gap: 16px;
     padding: 0;
     margin: 0;
+    color: var(--high-white);
 }
 
 .hero {
@@ -36,23 +65,45 @@ a {
     justify-content: center;
     align-items: center;
     gap: 70px;
-    background-color: #1f2937;
+    background-color: var(--green);
+    color: var(--high-white);
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.hero p {
+    font-size: var(--low-font-size);
 }
 
 .hero div {
     width: 400px;
     height: 200px;
+    margin-bottom: 70px;
 }
 
 .hero div > * {
-    margin: 6px 0;
+    margin: 10px 0;
+}
+
+.hero p,
+.action p {
+    color: var(--low-white);
 }
 
 .info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 0 100px 0;
+    margin: 40px 0 100px 0;
+}
+
+.info h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: var(--black);
 }
 
 .container {
@@ -63,34 +114,50 @@ a {
 .container > .card {
     display: flex;
     width: 150px;
-    margin-top: 30px;
+    margin-top: 50px;
     flex-flow: column nowrap;
     text-align: center;
     gap: 6px;
+    color: #5a5a5a;
+}
+
+.card > img {
+    width: 128px;
+    height: auto;
+    align-self: center;
 }
 
 .quote {
     display: flex;
-    height: 300px;
+    height: 400px;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: #e5e7eb;
+    background-color: var(--low-white);
+}
+
+.quote p {
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--black);
 }
 
 .quote > div {
-    width: 400px;
+    width: 760px;
 }
 
 #quote-autor {
     text-align: end;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-top: 24px;
 }
 
 .call-to-action {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 280px;
+    height: 300px;
 }
 
 .action {
@@ -100,6 +167,14 @@ a {
     align-items: center;
     height: 50px;
     gap: 80px;
+    background-color: var(--red-bg);
+    padding: 40px 90px;
+    border-radius: 6px;
+    color: var(--high-white);
+}
+
+.action h3 {
+    font-size: 20px;
 }
 
 .footer {
@@ -107,5 +182,6 @@ a {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background-color: #1f2937;
+    background-color: var(--green);
+    color: var(--high-white);
 }
