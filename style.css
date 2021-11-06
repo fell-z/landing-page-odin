@@ -22,6 +22,7 @@ a {
     background-color: var(--red-bg);
     font-size: var(--low-font-size);
     padding: 8px 16px;
+    border: 2px solid var(--high-white);
     border-radius: 12px;
     text-shadow: 2px 1px black;
 }
@@ -86,6 +87,10 @@ button {
 
 .hero div > * {
     margin: 10px 0;
+}
+
+.hero img {
+    border-radius: 12px;
 }
 
 .hero p,
